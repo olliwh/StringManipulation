@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/vue@next"></script>
+  <linkrel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
+  <style>
+    li:empty {
+      display: none;
+    }
+
+    th:empty {
+      display: none;
+    }
+  </style>
+  <title>String Manipulations</title>
+</head>
+
+<body>
+  <h1>String Manipulation</h1>
+
+  <div id="app">
+    <input v-model="input" type="text" placeholder="Word" />
+    <button @Click="ShowIt(input)">Show</button>
+    <p>{{emptyMessage}}</p>
+    <div>
+      <ul>
+        <li v-for="w in words">{{w}}</li>
+      </ul>
+    </div>
+
+    <table class="table table-striped">
+      <tbody>
+        <tr v-for="w in words">
+          <th>{{w}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
